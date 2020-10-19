@@ -1,7 +1,7 @@
-class CommentsController < ApplicationController
+class UsersController < ApplicationController
 
     def create 
-        raise params.inspect
+        binding.pry
     end
 
 end
