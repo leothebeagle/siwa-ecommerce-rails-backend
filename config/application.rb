@@ -34,13 +34,15 @@ module SiwaRailsBackend
 
     config.middleware.insert_before 0, Rack::Cors do
       allow do
-        origins '*'
+        origins 'localhost:3001'
         resource '*',
           :headers => :any,
           :methods => [:get, :post, :delete, :put, :patch, :options, :head],
           :max_age => 0
       end
     end
+
+    ActionDispatch::Session::CookieStore
 
   end
 end
