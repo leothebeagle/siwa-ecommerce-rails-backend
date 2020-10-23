@@ -2,7 +2,10 @@ class UsersController < ApplicationController
 
     def create 
         user = User.create(user_params)
-        binding.pry
+        session[:user_id] = user.id
+        # this logs the user in
+        binding.pry 
+        render json: user.to_json
     end
 
 
