@@ -38,7 +38,7 @@ module SiwaRailsBackend
         resource '*',
           :headers => :any,
           :methods => [:get, :post, :delete, :put, :patch, :options, :head],
-          :max_age => 0
+          :max_age => 0,
           :credentials => true
       end
     end
