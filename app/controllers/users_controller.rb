@@ -3,9 +3,10 @@ class UsersController < ApplicationController
     def create 
         user = User.create(user_params)
         session[:user_id] = user.id
-        # this logs the user in
+        # this logs the user in.
         binding.pry 
         render json: user.to_json
+        #do you actually need to send the entire user object? or will names and email suffice?
     end
 
 
