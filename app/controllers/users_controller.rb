@@ -5,7 +5,10 @@ class UsersController < ApplicationController
         session[:user_id] = user.id
         # this logs the user in.
         binding.pry 
-        render json: user.to_json
+        render json: {
+          logged_in: true,
+          user: user
+        }
         #do you actually need to send the entire user object? or will names and email suffice?
     end
 
