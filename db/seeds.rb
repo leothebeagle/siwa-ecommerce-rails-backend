@@ -18,23 +18,27 @@
                 name:"Urban hightops",
                 description:"With a rugged exterior to withstand the toughest urban commute and 
                 a cushioned interior to have you floating on clouds getting there.",
-                image:"source.unsplash/dwKiHoqqxk8/1600x900",
+                image:"https://source.unsplash.com/dwKiHoqqxk8/250x250",
                 price:59
             )
+            # image id: dwKiHoqqxk8
+           
 
             seller_one.items.create(
                 name:"Sunglasses",
                 description:"The trendiest designs for your eyes and nose",
-                image:"source.unsplash/SYx3UCHZJlo/1600x900",
+                image:"https://source.unsplash.com/SYx3UCHZJlo/250x250",
                 price: 125
             )
+            # image id: SYx3UCHZJlo
 
             seller_one.items.create(
                 name:"Basic tees",
                 description:"Be confident in your basic loadout with this set of 5 immaculate tees.",
-                image:"source.unsplash/xPJYL0l5Ii8/1600x900",
+                image:"https://source.unsplash.com/xPJYL0l5Ii8/250x250",
                 price: 65
             )
+            # image id: xPJYL0l5Ii8
         
         
             seller_two = Seller.create(store_name: "Garibaldi",
@@ -47,16 +51,18 @@
             seller_two.items.create(
                 name:"Beanie hat",
                 description:"Merino wool hat lined with soft fleece. Good till -30 F",
-                image:"source.unsplash/Sf8MWkoLreQ/1600x900",
+                image:"https://source.unsplash.com/Sf8MWkoLreQ/250x250",
                 price: 74
             )
+            # image id: Sf8MWkoLreQ
 
             seller_two.items.create(
                 name:"Sweatpants",
                 description:"Work from home in your weekend pants. everyday.",
-                image:"source.unsplash/eyFcZLLYvfA/1600x900",
+                image:"https://source.unsplash.com/eyFcZLLYvfA/250x250",
                 price: 37
             )
+            # image id: eyFcZLLYvfA
         
         
             seller_three = Seller.create(store_name: "Carnaval",
@@ -69,9 +75,10 @@
             seller_three.items.create(
                 name:"Notebook",
                 description:"Plain unruled notebook. No bleedthrough. Our sturdy paper creates a writing experience that's both tactile and effortless.",
-                image:"source.unsplash/TPoARluSmYs/1600x900",
+                image:"https://source.unsplash.com/TPoARluSmYs/250x250",
                 price:15
             )
+            # image id: TPoARluSmYs
 
             
         
