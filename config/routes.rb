@@ -3,4 +3,6 @@ Rails.application.routes.draw do
   post '/users', to: 'users#create'
   delete '/logout', to: 'sessions#logout'
   post '/login', to: 'sessions#create'
+  get '/items', to: 'items#index'
 end
+
