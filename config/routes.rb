@@ -4,5 +4,11 @@ Rails.application.routes.draw do
   delete '/logout', to: 'sessions#logout'
   post '/login', to: 'sessions#create'
   get '/items', to: 'items#index'
+  
+  
+  # /magazines/:magazine_id/ads/:id
+  # ads#show
+  # displays a specific ad belonging to a specific magazine.
+  # We can replicate this with a cart that belongs to a user
 end
 
