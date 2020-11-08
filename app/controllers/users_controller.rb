@@ -3,6 +3,8 @@ class UsersController < ApplicationController
     def create 
         user = User.create(user_params)
         user.cart = Cart.create
+        # Later on you can refactor and call / redirect to the cartController. 
+        # possibly better for separation of concerns. 
         session[:user_id] = user.id
         # this logs the user in.
         binding.pry 
@@ -11,7 +13,6 @@ class UsersController < ApplicationController
           user: current_user,
           cart: current_cart
         }
-        #do you actually need to send the entire user object? or will names and email suffice?
     end
 
 
@@ -23,4 +24,4 @@ class UsersController < ApplicationController
 
 end
 
-# it'll be good practice here to use strong_params
+ 
