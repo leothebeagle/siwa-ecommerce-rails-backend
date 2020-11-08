@@ -5,15 +5,21 @@ class SessionsController < ApplicationController
      
         if user.authenticate(params[:user][:password])
             session[:user_id] = user.id
+            binding.pry
             render json: {
                 logged_in: true,
-                user: user
+                user: user,
+                cart: {
+                    id: current_cart.id,
+                    items: current_cart.items
+                }
               }
         end
     end
 
     def logout
         reset_session
+        binding.pry
         render json: {
             logged_out: true
         }
