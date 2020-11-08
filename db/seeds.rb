@@ -80,6 +80,21 @@
             )
             # image id: TPoARluSmYs
 
+            user_1 = User.create(
+                first_name: "Amina",
+                last_name: "Taha",
+                email:"aa@aa.aa",
+                password: "aa",
+                password_confirmation: "aa"
+            )
+
+            user_1.cart = Cart.create
+
+            user_1.cart.items << Item.last
+            user_1.cart.items << Item.first
+            user_1.save
+
+            
             
         
     
