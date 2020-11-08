@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   post '/login', to: 'sessions#create'
   get '/items', to: 'items#index'
   
+  post '/carts', to: 'carts#add_item_to_cart'
   
   # /magazines/:magazine_id/ads/:id
   # ads#show
