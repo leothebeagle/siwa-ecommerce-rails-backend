@@ -6,7 +6,7 @@ class ApplicationController < ActionController::API
     end 
 
     def current_cart
-        @current_cart ||= current_user.cart
+        @current_cart ||= current_user.cart if current_user
     end
 
 end
