@@ -5,18 +5,19 @@ class CartsController < ApplicationController
         item = Item.find(params["item"]["id"]) if params["item"]["id"]
 
         if cart 
-            cart.items << item
-            cart.save
+            current_cart.items << item if current_cart == cart
+            current_cart.save
         else 
-            cart = Cart.create 
-            cart.items << item 
-            cart.save 
+            cart = Cart.create
+            current_cart = cart 
+            current_cart.items << item 
+            current_cart.save 
         end
         binding.pry
         render json: {
             cart: {
-                id: cart.id,
-                items: cart.items
+                id: current_cart.id,
+                items: current_cart.items
             }
         }
         
