@@ -6,8 +6,8 @@ class UsersController < ApplicationController
         # Later on you can refactor and call / redirect to the cartController. 
         # possibly better for separation of concerns. 
         session[:user_id] = user.id
-        # this logs the user in.
-        binding.pry 
+        session[:cart_id] = cart.id
+        
         render json: {
           logged_in: true,
           user: current_user,
