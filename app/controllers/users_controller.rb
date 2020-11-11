@@ -7,6 +7,7 @@ class UsersController < ApplicationController
         # possibly better for separation of concerns. 
         session[:user_id] = user.id
         session[:cart_id] = cart.id
+        cookies[:cart_id] = cart.id
         
         render json: {
           logged_in: true,
