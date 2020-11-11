@@ -1,23 +1,24 @@
 class CartsController < ApplicationController
+
     def add_item_to_cart
-        cart = Cart.find(params["cart_id"]) if params["cart_id"]
         item = Item.find(params["item"]["id"]) if params["item"]["id"]
-        binding.pry
-        
-        if cart 
-            cart.items << item 
-            cart.save
+        if cookies[:cart_id]
+            if check_cart_cookie
+                current_cart.items << item 
+                current_cart.save
+            end
         else 
-            cart = Cart.create
-            cart = cart 
-            cart.items << item 
-            cart.save 
-        end
-      
+            cart = Cart.create 
+            session[:cart_id] = cart.id
+            cookies[:cart_id] = cart.id
+            current_cart.items << item 
+            current_cart.save
+        end 
+        binding.pry
         render json: {
             cart: {
-                id: cart.id,
-                items: cart.items
+                id: current_cart.id,
+                items: current_cart.items
             }
         }  
     end
