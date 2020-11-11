@@ -20,6 +20,7 @@ class SessionsController < ApplicationController
     
     def logout
         reset_session
+        cookies.delete("cart_id")
         render json: {
             logged_out: true
         }
