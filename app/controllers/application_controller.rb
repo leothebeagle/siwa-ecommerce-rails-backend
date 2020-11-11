@@ -20,7 +20,7 @@ class ApplicationController < ActionController::API
 
     def check_cart_cookie
         cookie_cart_id = cookies["cart_id"]
-        binding.pry
+        
         true if cookie_cart_id == session[:cart_id].to_s
     end
 
