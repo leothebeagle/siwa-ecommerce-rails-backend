@@ -1,25 +1,24 @@
 class CartsController < ApplicationController
     def add_item_to_cart
-        binding.pry
         cart = Cart.find(params["cart_id"]) if params["cart_id"]
         item = Item.find(params["item"]["id"]) if params["item"]["id"]
-
+        binding.pry
+        
         if cart 
-            current_cart.items << item if current_cart == cart
-            current_cart.save
+            cart.items << item 
+            cart.save
         else 
             cart = Cart.create
-            current_cart = cart 
-            current_cart.items << item 
-            current_cart.save 
+            cart = cart 
+            cart.items << item 
+            cart.save 
         end
-        binding.pry
+      
         render json: {
             cart: {
-                id: current_cart.id,
-                items: current_cart.items
+                id: cart.id,
+                items: cart.items
             }
-        }
-        
+        }  
     end
 end
