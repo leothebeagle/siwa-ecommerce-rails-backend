@@ -6,6 +6,7 @@ class SessionsController < ApplicationController
         if user.authenticate(params[:user][:password])
             session[:user_id] = user.id
             session[:cart_id] = user.cart.id
+            cookies[:cart_id] = user.cart.id
             render json: {
                 logged_in: true,
                 user: user,
@@ -16,7 +17,7 @@ class SessionsController < ApplicationController
             }
         end
     end
-
+    
     def logout
         reset_session
         render json: {
