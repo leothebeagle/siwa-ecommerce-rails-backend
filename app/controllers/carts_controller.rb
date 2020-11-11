@@ -14,7 +14,7 @@ class CartsController < ApplicationController
             current_cart.items << item 
             current_cart.save
         end 
-        binding.pry
+        
         render json: {
             cart: {
                 id: current_cart.id,
