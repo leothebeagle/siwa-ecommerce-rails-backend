@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   get '/items', to: 'items#index'
   
   post '/carts', to: 'carts#add_item_to_cart'
+  post '/orders', to: 'orders#create'
   
   # /magazines/:magazine_id/ads/:id
   # ads#show
