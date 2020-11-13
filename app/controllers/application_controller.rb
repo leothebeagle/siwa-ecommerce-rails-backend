@@ -1,7 +1,5 @@
 class ApplicationController < ActionController::API
     include ActionController::Cookies
-    
-    @test_variable = "I am an instance variable. can you access me?"
 
     def current_user 
         current_user ||= User.find(session[:user_id]) if session[:user_id]
@@ -22,6 +20,11 @@ class ApplicationController < ActionController::API
         cookie_cart_id = cookies["cart_id"]
         
         true if cookie_cart_id == session[:cart_id].to_s
+    end
+
+    def current_cart_total
+        item_prices = current_cart.items.map { |i| i.price }
+        item_prices.reduce(0) { |sum, price| sum + price }
     end
 
 end
