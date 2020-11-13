@@ -2,7 +2,8 @@ class UsersController < ApplicationController
   
     def create 
         user = User.create(user_params)
-        user.cart = Cart.create
+        cart = Cart.create
+        cart.user = user
         # Later on you can refactor and call / redirect to the cartController. 
         # possibly better for separation of concerns. 
         session[:user_id] = user.id
