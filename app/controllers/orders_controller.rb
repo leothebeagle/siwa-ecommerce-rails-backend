@@ -1,9 +1,10 @@
 class OrdersController < ApplicationController
     def create
-        binding.pry 
+        
         if check_cart_cookie
-            order = Order.create
+            order = Order.new
             order.cart = current_cart
+            order.save
             new_cart = Cart.create 
             session[:cart_id] = new_cart.id
             cookies[:cart_id] = new_cart.id
