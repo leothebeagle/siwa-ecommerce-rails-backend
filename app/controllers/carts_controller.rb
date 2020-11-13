@@ -14,11 +14,12 @@ class CartsController < ApplicationController
             current_cart.items << item 
             current_cart.save
         end 
-        
+
         render json: {
             cart: {
                 id: current_cart.id,
-                items: current_cart.items
+                items: current_cart.items,
+                total: current_cart_total
             }
         }  
     end
