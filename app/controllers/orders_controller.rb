@@ -10,13 +10,11 @@ class OrdersController < ApplicationController
             cookies[:cart_id] = new_cart.id
         end
         
-        binding.pry
-
-
         render json: {
             cart: {
                 id: current_cart.id,
-                items: current_cart.items
+                items: current_cart.items,
+                total: current_cart_total
             }
         }
         
