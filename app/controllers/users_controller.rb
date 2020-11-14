@@ -13,7 +13,11 @@ class UsersController < ApplicationController
         render json: {
           logged_in: true,
           user: current_user,
-          cart: current_cart
+          cart: {
+            id: current_cart.id,
+            items: current_cart.items,
+            total: current_cart_total
+        }
         }
     end
 
