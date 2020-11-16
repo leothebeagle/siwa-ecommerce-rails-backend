@@ -88,11 +88,11 @@
                 password_confirmation: "aa"
             )
 
-            user_1.cart = Cart.create
+           cart = user_1.carts.create
 
-            user_1.cart.items << Item.last
-            user_1.cart.items << Item.first
-            user_1.save
+            cart.items << Item.last
+            cart.items << Item.first
+            cart.save
 
             
             
