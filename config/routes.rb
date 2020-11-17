@@ -7,6 +7,10 @@ Rails.application.routes.draw do
   
   post '/carts', to: 'carts#add_item_to_cart'
   post '/orders', to: 'orders#create'
+
+
+  # draw a route to delete a cart item. should be RESTFUl, meaning, it should look like:
+  # carts/3/items/1
   
   # /magazines/:magazine_id/ads/:id
   # ads#show
