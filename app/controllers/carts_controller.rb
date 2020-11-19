@@ -3,7 +3,6 @@ class CartsController < ApplicationController
     # include an action called delete_item_from_cart
     # it will receive params of the item id. it should search current_cart.items, 
     # remove it from the list, then render the updated cart as json
-
     def add_item_to_cart
         item = Item.find(params["item"]["id"]) if params["item"]["id"]
         if cookies[:cart_id]
@@ -26,5 +25,9 @@ class CartsController < ApplicationController
                 total: current_cart_total
             }
         }  
+    end
+
+    def remove_item_from_cart
+        binding.pry
     end
 end
