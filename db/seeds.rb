@@ -16,8 +16,7 @@
 
             seller_one.items.create(
                 name:"Urban hightops",
-                description:"With a rugged exterior to withstand the toughest urban commute and 
-                a cushioned interior to have you floating on clouds getting there.",
+                description:"Wet weather, all-day urban adventure.",
                 image:"https://source.unsplash.com/dwKiHoqqxk8/250x250",
                 price:59
             )
@@ -26,7 +25,7 @@
 
             seller_one.items.create(
                 name:"Sunglasses",
-                description:"The trendiest designs for your eyes and nose",
+                description:"The trendiest designs for your face",
                 image:"https://source.unsplash.com/SYx3UCHZJlo/250x250",
                 price: 125
             )
@@ -34,7 +33,7 @@
 
             seller_one.items.create(
                 name:"Basic tees",
-                description:"Be confident in your basic loadout with this set of 5 immaculate tees.",
+                description:"Up your basic loadout with this set of 5 immaculate tees.",
                 image:"https://source.unsplash.com/xPJYL0l5Ii8/250x250",
                 price: 65
             )
@@ -58,7 +57,7 @@
 
             seller_two.items.create(
                 name:"Sweatpants",
-                description:"Work from home in your weekend pants. everyday.",
+                description:"Work from home in your weekend pants",
                 image:"https://source.unsplash.com/eyFcZLLYvfA/250x250",
                 price: 37
             )
@@ -74,7 +73,7 @@
 
             seller_three.items.create(
                 name:"Notebook",
-                description:"Plain unruled notebook. No bleedthrough. Our sturdy paper creates a writing experience that's both tactile and effortless.",
+                description:"Plain unruled notebook with no bleedthrough.",
                 image:"https://source.unsplash.com/TPoARluSmYs/250x250",
                 price:15
             )
