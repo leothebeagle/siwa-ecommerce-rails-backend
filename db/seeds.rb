@@ -25,7 +25,7 @@
 
             seller_one.items.create(
                 name:"Sunglasses",
-                description:"The trendiest designs for your face",
+                description:"The trendiest designs for your face.",
                 image:"https://source.unsplash.com/SYx3UCHZJlo/250x250",
                 price: 125
             )
@@ -57,7 +57,7 @@
 
             seller_two.items.create(
                 name:"Sweatpants",
-                description:"Work from home in your weekend pants",
+                description:"Comfortable fit",
                 image:"https://source.unsplash.com/eyFcZLLYvfA/250x250",
                 price: 37
             )
@@ -73,7 +73,7 @@
 
             seller_three.items.create(
                 name:"Notebook",
-                description:"Plain unruled notebook with no bleedthrough.",
+                description:"Plain unruled notebook.",
                 image:"https://source.unsplash.com/TPoARluSmYs/250x250",
                 price:15
             )
